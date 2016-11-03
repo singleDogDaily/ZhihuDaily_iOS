@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		5733EE84AFFC0175BA4D61F9 /* Pods_SingleDogDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */; };
 		6500F1761DC6ED770054A4AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1751DC6ED770054A4AC /* AppDelegate.swift */; };
-		6500F1781DC6ED770054A4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1771DC6ED770054A4AC /* ViewController.swift */; };
-		6500F17B1DC6ED770054A4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1791DC6ED770054A4AC /* Main.storyboard */; };
 		6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6500F17C1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld */; };
 		6500F1801DC6ED770054A4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6500F17F1DC6ED770054A4AC /* Assets.xcassets */; };
-		6500F1831DC6ED770054A4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1811DC6ED770054A4AC /* LaunchScreen.storyboard */; };
 		6500F18E1DC6ED770054A4AC /* SingleDogDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F18D1DC6ED770054A4AC /* SingleDogDailyTests.swift */; };
 		6500F1991DC6ED770054A4AC /* SingleDogDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1981DC6ED770054A4AC /* SingleDogDailyUITests.swift */; };
 		6500F1A71DC6EE8D0054A4AC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1A61DC6EE8D0054A4AC /* Podfile */; };
 		6500F1A91DC6EECB0054A4AC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1A81DC6EECB0054A4AC /* .gitignore */; };
 		6500F1AE1DC712430054A4AC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1AD1DC712430054A4AC /* NetworkManager.swift */; };
+		6500F1BC1DCADB320054A4AC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1BB1DCADB320054A4AC /* HomeVC.swift */; };
 		93E44C51EBAF6D4EAFD56360 /* Pods_SingleDogDailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */; };
 		A99F02F5F41976AC303E2254 /* Pods_SingleDogDailyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,11 +43,8 @@
 		2CF8071002618C63874954EA /* Pods-SingleDogDailyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyUITests/Pods-SingleDogDailyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6500F1721DC6ED770054A4AC /* SingleDogDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleDogDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6500F1751DC6ED770054A4AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6500F1771DC6ED770054A4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6500F17A1DC6ED770054A4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6500F17D1DC6ED770054A4AC /* SingleDogDaily.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingleDogDaily.xcdatamodel; sourceTree = "<group>"; };
 		6500F17F1DC6ED770054A4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6500F1821DC6ED770054A4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6500F1841DC6ED770054A4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6500F1891DC6ED770054A4AC /* SingleDogDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleDogDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6500F18D1DC6ED770054A4AC /* SingleDogDailyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDogDailyTests.swift; sourceTree = "<group>"; };
@@ -57,9 +52,10 @@
 		6500F1941DC6ED770054A4AC /* SingleDogDailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleDogDailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6500F1981DC6ED770054A4AC /* SingleDogDailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDogDailyUITests.swift; sourceTree = "<group>"; };
 		6500F19A1DC6ED770054A4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6500F1A61DC6EE8D0054A4AC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6500F1A61DC6EE8D0054A4AC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6500F1A81DC6EECB0054A4AC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6500F1AD1DC712430054A4AC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6500F1BB1DCADB320054A4AC /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleDogDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +137,7 @@
 				6500F1AA1DC712080054A4AC /* Manager */,
 				6500F1AB1DC712080054A4AC /* Tool */,
 				6500F1751DC6ED770054A4AC /* AppDelegate.swift */,
-				6500F1771DC6ED770054A4AC /* ViewController.swift */,
-				6500F1791DC6ED770054A4AC /* Main.storyboard */,
 				6500F17F1DC6ED770054A4AC /* Assets.xcassets */,
-				6500F1811DC6ED770054A4AC /* LaunchScreen.storyboard */,
 				6500F1841DC6ED770054A4AC /* Info.plist */,
 				6500F17C1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld */,
 			);
@@ -187,8 +180,73 @@
 		6500F1AC1DC712080054A4AC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6500F1B31DCADB010054A4AC /* Home */,
+				6500F1B71DCADB010054A4AC /* Setting */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6500F1B31DCADB010054A4AC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1B41DCADB010054A4AC /* Controller */,
+				6500F1B51DCADB010054A4AC /* Model */,
+				6500F1B61DCADB010054A4AC /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6500F1B41DCADB010054A4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1BB1DCADB320054A4AC /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6500F1B51DCADB010054A4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6500F1B61DCADB010054A4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6500F1B71DCADB010054A4AC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1B81DCADB010054A4AC /* Controller */,
+				6500F1B91DCADB010054A4AC /* Model */,
+				6500F1BA1DCADB010054A4AC /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		6500F1B81DCADB010054A4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6500F1B91DCADB010054A4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6500F1BA1DCADB010054A4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6C2238A7BB411B6CB909CE1B /* Frameworks */ = {
@@ -254,6 +312,7 @@
 				6500F1911DC6ED770054A4AC /* Frameworks */,
 				6500F1921DC6ED770054A4AC /* Resources */,
 				16FE1B1C212C892D27315D0A /* [CP] Copy Pods Resources */,
+				DB5EE8E9A170D74FFADA9987 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,10 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6500F1A91DC6EECB0054A4AC /* .gitignore in Resources */,
-				6500F1831DC6ED770054A4AC /* LaunchScreen.storyboard in Resources */,
 				6500F1801DC6ED770054A4AC /* Assets.xcassets in Resources */,
 				6500F1A71DC6EE8D0054A4AC /* Podfile in Resources */,
-				6500F17B1DC6ED770054A4AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B7F0428273B8DD0BFB5BEE4A /* [CP] Copy Pods Resources */ = {
@@ -431,7 +488,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5EE8E9A170D74FFADA9987 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleDogDailyUITests/Pods-SingleDogDailyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0527B2A8DEA6E35E04EC618 /* [CP] Embed Pods Frameworks */ = {
@@ -461,7 +533,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -472,8 +544,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6500F1AE1DC712430054A4AC /* NetworkManager.swift in Sources */,
+				6500F1BC1DCADB320054A4AC /* HomeVC.swift in Sources */,
 				6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */,
-				6500F1781DC6ED770054A4AC /* ViewController.swift in Sources */,
 				6500F1761DC6ED770054A4AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,25 +580,6 @@
 			targetProxy = 6500F1951DC6ED770054A4AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6500F1791DC6ED770054A4AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6500F17A1DC6ED770054A4AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6500F1811DC6ED770054A4AC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6500F1821DC6ED770054A4AC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6500F19B1DC6ED770054A4AC /* Debug */ = {
@@ -625,10 +678,12 @@
 			baseConfigurationReference = 80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 33T2QK6H57;
 				INFOPLIST_FILE = SingleDogDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDaily;
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -639,10 +694,12 @@
 			baseConfigurationReference = 0FDA9C0AD59FE351B590310A /* Pods-SingleDogDaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 33T2QK6H57;
 				INFOPLIST_FILE = SingleDogDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDaily;
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

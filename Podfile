@@ -8,7 +8,7 @@ pod 'JSONModel'					        #https://github.com/jsonmodel/jsonmodel
 pod 'MBProgressHUD', '~> 1.0.0'           #https://github.com/jdg/MBProgressHUD
 pod 'MJRefresh'					        #https://github.com/CoderMJLee/MJRefresh
 pod 'Reachability'                        #https://github.com/tonymillion/Reachability
-pod 'Masonry'						        #https://github.com/SnapKit/Masonry
+pod 'SnapKit', '~> 3.0.2'
 # Pods for SingleDogDaily
 
 target 'SingleDogDailyTests' do

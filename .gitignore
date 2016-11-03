@@ -45,6 +45,17 @@ playground.xcworkspace
 #
 # Pods/
 
+# 忽略Xcode本地用户配置信息
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+xcshareddata/
+.metadata/
+
+# 忽略`Pods/`和`Podfile.lock`
+Pods/
+Podfile.lock
+
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
