@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5733EE84AFFC0175BA4D61F9 /* Pods_SingleDogDaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */; };
+		6500F1761DC6ED770054A4AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1751DC6ED770054A4AC /* AppDelegate.swift */; };
+		6500F1781DC6ED770054A4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1771DC6ED770054A4AC /* ViewController.swift */; };
+		6500F17B1DC6ED770054A4AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1791DC6ED770054A4AC /* Main.storyboard */; };
+		6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6500F17C1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld */; };
+		6500F1801DC6ED770054A4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6500F17F1DC6ED770054A4AC /* Assets.xcassets */; };
+		6500F1831DC6ED770054A4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1811DC6ED770054A4AC /* LaunchScreen.storyboard */; };
+		6500F18E1DC6ED770054A4AC /* SingleDogDailyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F18D1DC6ED770054A4AC /* SingleDogDailyTests.swift */; };
+		6500F1991DC6ED770054A4AC /* SingleDogDailyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1981DC6ED770054A4AC /* SingleDogDailyUITests.swift */; };
+		6500F1A71DC6EE8D0054A4AC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1A61DC6EE8D0054A4AC /* Podfile */; };
+		6500F1A91DC6EECB0054A4AC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6500F1A81DC6EECB0054A4AC /* .gitignore */; };
+		6500F1AE1DC712430054A4AC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1AD1DC712430054A4AC /* NetworkManager.swift */; };
+		93E44C51EBAF6D4EAFD56360 /* Pods_SingleDogDailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */; };
+		A99F02F5F41976AC303E2254 /* Pods_SingleDogDailyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6500F18A1DC6ED770054A4AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6500F16A1DC6ED770054A4AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6500F1711DC6ED770054A4AC;
+			remoteInfo = SingleDogDaily;
+		};
+		6500F1951DC6ED770054A4AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6500F16A1DC6ED770054A4AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6500F1711DC6ED770054A4AC;
+			remoteInfo = SingleDogDaily;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FDA9C0AD59FE351B590310A /* Pods-SingleDogDaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily.release.xcconfig"; sourceTree = "<group>"; };
+		2CF8071002618C63874954EA /* Pods-SingleDogDailyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyUITests/Pods-SingleDogDailyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6500F1721DC6ED770054A4AC /* SingleDogDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleDogDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6500F1751DC6ED770054A4AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6500F1771DC6ED770054A4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6500F17A1DC6ED770054A4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6500F17D1DC6ED770054A4AC /* SingleDogDaily.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingleDogDaily.xcdatamodel; sourceTree = "<group>"; };
+		6500F17F1DC6ED770054A4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6500F1821DC6ED770054A4AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6500F1841DC6ED770054A4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6500F1891DC6ED770054A4AC /* SingleDogDailyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleDogDailyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6500F18D1DC6ED770054A4AC /* SingleDogDailyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDogDailyTests.swift; sourceTree = "<group>"; };
+		6500F18F1DC6ED770054A4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6500F1941DC6ED770054A4AC /* SingleDogDailyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleDogDailyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6500F1981DC6ED770054A4AC /* SingleDogDailyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDogDailyUITests.swift; sourceTree = "<group>"; };
+		6500F19A1DC6ED770054A4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6500F1A61DC6EE8D0054A4AC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6500F1A81DC6EECB0054A4AC /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		6500F1AD1DC712430054A4AC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily.debug.xcconfig"; sourceTree = "<group>"; };
+		AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleDogDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleDogDailyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D758EAAD6F41741F5E903488 /* Pods-SingleDogDailyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF410407173B05F0CEF64315 /* Pods-SingleDogDailyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyUITests/Pods-SingleDogDailyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleDogDailyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6500F16F1DC6ED770054A4AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5733EE84AFFC0175BA4D61F9 /* Pods_SingleDogDaily.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6500F1861DC6ED770054A4AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99F02F5F41976AC303E2254 /* Pods_SingleDogDailyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6500F1911DC6ED770054A4AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E44C51EBAF6D4EAFD56360 /* Pods_SingleDogDailyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EC60BDEB27885E8CE8E89D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */,
+				0FDA9C0AD59FE351B590310A /* Pods-SingleDogDaily.release.xcconfig */,
+				7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */,
+				D758EAAD6F41741F5E903488 /* Pods-SingleDogDailyTests.release.xcconfig */,
+				2CF8071002618C63874954EA /* Pods-SingleDogDailyUITests.debug.xcconfig */,
+				EF410407173B05F0CEF64315 /* Pods-SingleDogDailyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6500F1691DC6ED770054A4AC = {
+			isa = PBXGroup;
+			children = (
+				6500F1A61DC6EE8D0054A4AC /* Podfile */,
+				6500F1A81DC6EECB0054A4AC /* .gitignore */,
+				6500F1741DC6ED770054A4AC /* SingleDogDaily */,
+				6500F18C1DC6ED770054A4AC /* SingleDogDailyTests */,
+				6500F1971DC6ED770054A4AC /* SingleDogDailyUITests */,
+				6500F1731DC6ED770054A4AC /* Products */,
+				4EC60BDEB27885E8CE8E89D6 /* Pods */,
+				6C2238A7BB411B6CB909CE1B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6500F1731DC6ED770054A4AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1721DC6ED770054A4AC /* SingleDogDaily.app */,
+				6500F1891DC6ED770054A4AC /* SingleDogDailyTests.xctest */,
+				6500F1941DC6ED770054A4AC /* SingleDogDailyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6500F1741DC6ED770054A4AC /* SingleDogDaily */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1AC1DC712080054A4AC /* ViewController */,
+				6500F1AA1DC712080054A4AC /* Manager */,
+				6500F1AB1DC712080054A4AC /* Tool */,
+				6500F1751DC6ED770054A4AC /* AppDelegate.swift */,
+				6500F1771DC6ED770054A4AC /* ViewController.swift */,
+				6500F1791DC6ED770054A4AC /* Main.storyboard */,
+				6500F17F1DC6ED770054A4AC /* Assets.xcassets */,
+				6500F1811DC6ED770054A4AC /* LaunchScreen.storyboard */,
+				6500F1841DC6ED770054A4AC /* Info.plist */,
+				6500F17C1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld */,
+			);
+			path = SingleDogDaily;
+			sourceTree = "<group>";
+		};
+		6500F18C1DC6ED770054A4AC /* SingleDogDailyTests */ = {
+			isa = PBXGroup;
+			children = (
+				6500F18D1DC6ED770054A4AC /* SingleDogDailyTests.swift */,
+				6500F18F1DC6ED770054A4AC /* Info.plist */,
+			);
+			path = SingleDogDailyTests;
+			sourceTree = "<group>";
+		};
+		6500F1971DC6ED770054A4AC /* SingleDogDailyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1981DC6ED770054A4AC /* SingleDogDailyUITests.swift */,
+				6500F19A1DC6ED770054A4AC /* Info.plist */,
+			);
+			path = SingleDogDailyUITests;
+			sourceTree = "<group>";
+		};
+		6500F1AA1DC712080054A4AC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6500F1AD1DC712430054A4AC /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6500F1AB1DC712080054A4AC /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		6500F1AC1DC712080054A4AC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6C2238A7BB411B6CB909CE1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */,
+				D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */,
+				F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6500F1711DC6ED770054A4AC /* SingleDogDaily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6500F19D1DC6ED770054A4AC /* Build configuration list for PBXNativeTarget "SingleDogDaily" */;
+			buildPhases = (
+				D6FB96B0C907C7A48C7E8D50 /* [CP] Check Pods Manifest.lock */,
+				6500F16E1DC6ED770054A4AC /* Sources */,
+				6500F16F1DC6ED770054A4AC /* Frameworks */,
+				6500F1701DC6ED770054A4AC /* Resources */,
+				A353D33615D6B74A71990372 /* [CP] Embed Pods Frameworks */,
+				B7F0428273B8DD0BFB5BEE4A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SingleDogDaily;
+			productName = SingleDogDaily;
+			productReference = 6500F1721DC6ED770054A4AC /* SingleDogDaily.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6500F1881DC6ED770054A4AC /* SingleDogDailyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6500F1A01DC6ED770054A4AC /* Build configuration list for PBXNativeTarget "SingleDogDailyTests" */;
+			buildPhases = (
+				B24859C51D30DC2E6A1DB04F /* [CP] Check Pods Manifest.lock */,
+				6500F1851DC6ED770054A4AC /* Sources */,
+				6500F1861DC6ED770054A4AC /* Frameworks */,
+				6500F1871DC6ED770054A4AC /* Resources */,
+				F0527B2A8DEA6E35E04EC618 /* [CP] Embed Pods Frameworks */,
+				717BED9C55012385D6A70442 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6500F18B1DC6ED770054A4AC /* PBXTargetDependency */,
+			);
+			name = SingleDogDailyTests;
+			productName = SingleDogDailyTests;
+			productReference = 6500F1891DC6ED770054A4AC /* SingleDogDailyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6500F1931DC6ED770054A4AC /* SingleDogDailyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6500F1A31DC6ED770054A4AC /* Build configuration list for PBXNativeTarget "SingleDogDailyUITests" */;
+			buildPhases = (
+				F45EC605E9261FD6377771C9 /* [CP] Check Pods Manifest.lock */,
+				6500F1901DC6ED770054A4AC /* Sources */,
+				6500F1911DC6ED770054A4AC /* Frameworks */,
+				6500F1921DC6ED770054A4AC /* Resources */,
+				16FE1B1C212C892D27315D0A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6500F1961DC6ED770054A4AC /* PBXTargetDependency */,
+			);
+			name = SingleDogDailyUITests;
+			productName = SingleDogDailyUITests;
+			productReference = 6500F1941DC6ED770054A4AC /* SingleDogDailyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6500F16A1DC6ED770054A4AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Tommy;
+				TargetAttributes = {
+					6500F1711DC6ED770054A4AC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33T2QK6H57;
+						ProvisioningStyle = Automatic;
+					};
+					6500F1881DC6ED770054A4AC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33T2QK6H57;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6500F1711DC6ED770054A4AC;
+					};
+					6500F1931DC6ED770054A4AC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33T2QK6H57;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6500F1711DC6ED770054A4AC;
+					};
+				};
+			};
+			buildConfigurationList = 6500F16D1DC6ED770054A4AC /* Build configuration list for PBXProject "SingleDogDaily" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6500F1691DC6ED770054A4AC;
+			productRefGroup = 6500F1731DC6ED770054A4AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6500F1711DC6ED770054A4AC /* SingleDogDaily */,
+				6500F1881DC6ED770054A4AC /* SingleDogDailyTests */,
+				6500F1931DC6ED770054A4AC /* SingleDogDailyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6500F1701DC6ED770054A4AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6500F1A91DC6EECB0054A4AC /* .gitignore in Resources */,
+				6500F1831DC6ED770054A4AC /* LaunchScreen.storyboard in Resources */,
+				6500F1801DC6ED770054A4AC /* Assets.xcassets in Resources */,
+				6500F1A71DC6EE8D0054A4AC /* Podfile in Resources */,
+				6500F17B1DC6ED770054A4AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6500F1871DC6ED770054A4AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6500F1921DC6ED770054A4AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16FE1B1C212C892D27315D0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleDogDailyUITests/Pods-SingleDogDailyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		717BED9C55012385D6A70442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A353D33615D6B74A71990372 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24859C51D30DC2E6A1DB04F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7F0428273B8DD0BFB5BEE4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6FB96B0C907C7A48C7E8D50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0527B2A8DEA6E35E04EC618 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F45EC605E9261FD6377771C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6500F16E1DC6ED770054A4AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6500F1AE1DC712430054A4AC /* NetworkManager.swift in Sources */,
+				6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */,
+				6500F1781DC6ED770054A4AC /* ViewController.swift in Sources */,
+				6500F1761DC6ED770054A4AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6500F1851DC6ED770054A4AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6500F18E1DC6ED770054A4AC /* SingleDogDailyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6500F1901DC6ED770054A4AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6500F1991DC6ED770054A4AC /* SingleDogDailyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6500F18B1DC6ED770054A4AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6500F1711DC6ED770054A4AC /* SingleDogDaily */;
+			targetProxy = 6500F18A1DC6ED770054A4AC /* PBXContainerItemProxy */;
+		};
+		6500F1961DC6ED770054A4AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6500F1711DC6ED770054A4AC /* SingleDogDaily */;
+			targetProxy = 6500F1951DC6ED770054A4AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6500F1791DC6ED770054A4AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6500F17A1DC6ED770054A4AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6500F1811DC6ED770054A4AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6500F1821DC6ED770054A4AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6500F19B1DC6ED770054A4AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6500F19C1DC6ED770054A4AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6500F19E1DC6ED770054A4AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 33T2QK6H57;
+				INFOPLIST_FILE = SingleDogDaily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDaily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6500F19F1DC6ED770054A4AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDA9C0AD59FE351B590310A /* Pods-SingleDogDaily.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 33T2QK6H57;
+				INFOPLIST_FILE = SingleDogDaily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDaily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6500F1A11DC6ED770054A4AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 33T2QK6H57;
+				INFOPLIST_FILE = SingleDogDailyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDailyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleDogDaily.app/SingleDogDaily";
+			};
+			name = Debug;
+		};
+		6500F1A21DC6ED770054A4AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D758EAAD6F41741F5E903488 /* Pods-SingleDogDailyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 33T2QK6H57;
+				INFOPLIST_FILE = SingleDogDailyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDailyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleDogDaily.app/SingleDogDaily";
+			};
+			name = Release;
+		};
+		6500F1A41DC6ED770054A4AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF8071002618C63874954EA /* Pods-SingleDogDailyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 33T2QK6H57;
+				INFOPLIST_FILE = SingleDogDailyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDailyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SingleDogDaily;
+			};
+			name = Debug;
+		};
+		6500F1A51DC6ED770054A4AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF410407173B05F0CEF64315 /* Pods-SingleDogDailyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 33T2QK6H57;
+				INFOPLIST_FILE = SingleDogDailyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily.SingleDogDailyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SingleDogDaily;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6500F16D1DC6ED770054A4AC /* Build configuration list for PBXProject "SingleDogDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6500F19B1DC6ED770054A4AC /* Debug */,
+				6500F19C1DC6ED770054A4AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6500F19D1DC6ED770054A4AC /* Build configuration list for PBXNativeTarget "SingleDogDaily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6500F19E1DC6ED770054A4AC /* Debug */,
+				6500F19F1DC6ED770054A4AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6500F1A01DC6ED770054A4AC /* Build configuration list for PBXNativeTarget "SingleDogDailyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6500F1A11DC6ED770054A4AC /* Debug */,
+				6500F1A21DC6ED770054A4AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6500F1A31DC6ED770054A4AC /* Build configuration list for PBXNativeTarget "SingleDogDailyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6500F1A41DC6ED770054A4AC /* Debug */,
+				6500F1A51DC6ED770054A4AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6500F17C1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6500F17D1DC6ED770054A4AC /* SingleDogDaily.xcdatamodel */,
+			);
+			currentVersion = 6500F17D1DC6ED770054A4AC /* SingleDogDaily.xcdatamodel */;
+			path = SingleDogDaily.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6500F16A1DC6ED770054A4AC /* Project object */;
+}

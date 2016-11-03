@@ -1,0 +1,6 @@
+framework module Pods_SingleDogDailyTests {
+  umbrella header "Pods-SingleDogDailyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
