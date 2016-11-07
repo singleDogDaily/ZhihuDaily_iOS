@@ -27,9 +27,9 @@ class NetworkManager: NSObject {
         RequestClient.sharedInstance.get(url, parameters: body, progress: { (progress:Progress) in
             //
             }, success: { (task:URLSessionDataTask!, responseObject:Any?) in
-                mysucceed(responseObject)
+                mysucceed(responseObject!)
             }) { (task:URLSessionDataTask?, error:Error?) in
-                myfailure(error)
+                myfailure(error!)
         }
     }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import ObjectMapper
+import Alamofire
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -27,18 +28,29 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Data Request
     func request(params:Any!) -> Void {
-        // 主题日报列表查看
-        let url = "https://news-at.zhihu.com/api/4/themes"
-        NetworkManager.GET(url: url, body:params as AnyObject?, succeed: { (responseObject:Any?) in
-            //
-            print("success.")
-        }) { (error:Error?) in
-            print("fail:" + error.debugDescription)
-        }
         
         let json = "{\"color\": 15007, \"thumbnail\": \"http://pic3.zhimg.com/0e71e90fd6be47630399d63c58beebfc.jpg\", \"description\": \"了解自己和别人，了解彼此的欲望和局限。\", \"id\": 13, \"name\": \"日常心理学\"}"
         let theme : DailyThemeModel? = DailyThemeModel(JSONString:json)
         print("name:\(theme!.name)")
+        
+        // 主题日报列表查看
+        let url = "https://news-at.zhihu.com/api/4/themes"
+        Alamofire.request(url).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)")
+                let jsonModel : DailyThemeListModel? = DailyThemeListModel(JSONString:utf8Text)
+                print("limit: \(jsonModel?.limit)")
+            }
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
     }
     
     func buildUI() {
