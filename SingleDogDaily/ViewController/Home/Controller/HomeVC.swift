@@ -10,65 +10,29 @@ import UIKit
 import SnapKit
 import ObjectMapper
 import Alamofire
+import MJRefresh
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    lazy var centerLabel = UILabel()
     lazy var tableView = UITableView()
+    var list:NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Home"
+        self.title = "Theme List"
         self.automaticallyAdjustsScrollViewInsets = false
         self.buildUI()
-        self.request(params: {})
-    }
-    
-    //MARK: - Data Request
-    func request(params:Any!) -> Void {
-        
-        let json = "{\"color\": 15007, \"thumbnail\": \"http://pic3.zhimg.com/0e71e90fd6be47630399d63c58beebfc.jpg\", \"description\": \"了解自己和别人，了解彼此的欲望和局限。\", \"id\": 13, \"name\": \"日常心理学\"}"
-        let theme : DailyThemeModel? = DailyThemeModel(JSONString:json)
-        print("name:\(theme!.name)")
-        
-        // 主题日报列表查看
-        let url = "https://news-at.zhihu.com/api/4/themes"
-        Alamofire.request(url).responseJSON { response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)")
-                let jsonModel : DailyThemeListModel? = DailyThemeListModel(JSONString:utf8Text)
-                print("limit: \(jsonModel?.limit)")
-            }
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-        }
+        self.requestThemeList()
     }
     
     func buildUI() {
         print(#function + "--- start build home ui.")
-        self.view.addSubview(centerLabel)
-        centerLabel.snp.makeConstraints { (make) in
-            make.width.equalTo(200.0)
-            make.height.equalTo(50.0)
-            make.center.equalTo(self.view)
-        }
-        centerLabel.textAlignment = NSTextAlignment.center
-        centerLabel.text = "Welcome to SingleDog's Daily"
-        centerLabel.textColor = UIColor.blue
-        centerLabel.numberOfLines = 0
         
         self.view .addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view)
+            make.top.equalTo(64)
             make.left.equalTo(self.view)
             make.bottom.equalTo(self.view)
             make.right.equalTo(self.view)
@@ -77,6 +41,19 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         
         print(#function + "--- ui build completed.")
+    }
+    
+    //MARK: - Request List Data
+    func requestThemeList() -> Void {
+        NetworkManager.login(userName:"username", password:"password", callback:{ response in
+            let model:DailyThemeListModel = response as! DailyThemeListModel
+            if let data = model.others {
+                self.list.addObjects(from: data)
+                self.tableView .reloadData()
+            } else {
+                print("返回列表数据为空")
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,8 +65,9 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        static let reuseIdentifier = "default_cell"
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "default_cell")
-        cell.textLabel?.text = "Hello Swift"
+        let model:DailyThemeModel = self.list[indexPath.row] as! DailyThemeModel
+        let cell = BasicCell(style: UITableViewCellStyle.value1, reuseIdentifier: "basic_cell")
+        cell.setModel(model: model)
         return cell
     }
     
@@ -100,12 +78,12 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //
-        return 10
+        return self.list.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //
-        return 44.0
+        return 60.0
     }
 
 }

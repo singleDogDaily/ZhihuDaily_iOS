@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let rootVC = HomeVC()
         let navigator = UINavigationController(rootViewController:rootVC)
-        navigator.setNavigationBarHidden(true, animated: false)
+        navigator.setNavigationBarHidden(false, animated: false)
         self.window!.rootViewController = navigator
         return true
     }

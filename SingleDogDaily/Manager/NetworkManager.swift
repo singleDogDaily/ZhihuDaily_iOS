@@ -7,37 +7,40 @@
 //
 
 import UIKit
-import AFNetworking
+import Alamofire
 
-typealias Succeed = (_:Any?)->Void
-typealias Failure = (_:Error?)->Void
+typealias SuccessBlock = (_ model:AnyObject?)->Void
 
+/// This is HttpManager of this project.
+/// ```swift
+/// hello
 class NetworkManager: NSObject {
     
     // login method.
-    func login(userName:String, password:String) {
-        print("login completed.")
+    static func login(userName:String, password:String, callback:@escaping SuccessBlock) {
+        let url = "https://news-at.zhihu.com/api/4/themes"
+        NetworkManager.GET(url: url, params: [:], callback: callback)
     }
     
     //普通get网络请求
-    class func GET(url:String!, body:AnyObject?, succeed:@escaping Succeed, failed:@escaping Failure) {
-        let mysucceed:Succeed = succeed
-        let myfailure:Failure = failed
-        
-        RequestClient.sharedInstance.get(url, parameters: body, progress: { (progress:Progress) in
-            //
-            }, success: { (task:URLSessionDataTask!, responseObject:Any?) in
-                mysucceed(responseObject!)
-            }) { (task:URLSessionDataTask?, error:Error?) in
-                myfailure(error!)
+    class private func GET(url:String!, params:Parameters, callback:@escaping SuccessBlock) {
+        Alamofire.request(url, method:.get, parameters:params).responseJSON { response in
+            print(response.request)  // original URL request
+            print(response.response) // HTTP URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            print("Error: \(response.result.error)")
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                let jsonModel : DailyThemeListModel? = DailyThemeListModel(JSONString:utf8Text)
+                callback(jsonModel)
+            }
         }
     }
-}
-
-class RequestClient: AFHTTPSessionManager {
-    private static let instance = RequestClient()
+    
+    //MARK: - Data Request
+    func request(url:String!, params:Any!) -> Void {
+        // 主题日报列表查看
         
-    class var sharedInstance:RequestClient {
-        return instance
     }
 }

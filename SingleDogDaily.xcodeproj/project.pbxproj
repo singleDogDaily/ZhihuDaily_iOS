@@ -19,6 +19,7 @@
 		6500F1BC1DCADB320054A4AC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1BB1DCADB320054A4AC /* HomeVC.swift */; };
 		6500F1BE1DCB40310054A4AC /* DailyThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1BD1DCB40310054A4AC /* DailyThemeModel.swift */; };
 		6500F1DB1DD075B80054A4AC /* DailyThemeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1DA1DD075B80054A4AC /* DailyThemeListModel.swift */; };
+		6500F1DD1DD2C72E0054A4AC /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500F1DC1DD2C72D0054A4AC /* BasicCell.swift */; };
 		93E44C51EBAF6D4EAFD56360 /* Pods_SingleDogDailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */; };
 		A99F02F5F41976AC303E2254 /* Pods_SingleDogDailyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		6500F1BB1DCADB320054A4AC /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6500F1BD1DCB40310054A4AC /* DailyThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyThemeModel.swift; sourceTree = "<group>"; };
 		6500F1DA1DD075B80054A4AC /* DailyThemeListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyThemeListModel.swift; sourceTree = "<group>"; };
+		6500F1DC1DD2C72D0054A4AC /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleDogDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 		6500F1B61DCADB010054A4AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6500F1DC1DD2C72D0054A4AC /* BasicCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				6500F1BC1DCADB320054A4AC /* HomeVC.swift in Sources */,
 				6500F1DB1DD075B80054A4AC /* DailyThemeListModel.swift in Sources */,
 				6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */,
+				6500F1DD1DD2C72E0054A4AC /* BasicCell.swift in Sources */,
 				6500F1761DC6ED770054A4AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
