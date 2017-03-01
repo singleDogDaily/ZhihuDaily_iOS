@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class DailyThemeModel: NSObject, Mappable {
+class DailyThemeModel: BaseModel {
     
     var id: Int?
     var color: Int?
@@ -18,11 +18,12 @@ class DailyThemeModel: NSObject, Mappable {
     var name: String?
     
     required init?(map: Map) {
-        
+        super.init(map:map)
     }
     
     // Mappable
-    func mapping(map: Map) {
+    override func mapping(map: Map) {
+        super.mapping(map:map)
         id              <- map["id"]
         color           <- map["color"]
         thumbnail       <- map["thumbnail"]

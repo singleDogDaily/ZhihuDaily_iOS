@@ -21,6 +21,8 @@
 		65227A281E66C0EC0061BBF4 /* DailyThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65227A1F1E66C0EC0061BBF4 /* DailyThemeModel.swift */; };
 		65227A291E66C0EC0061BBF4 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65227A211E66C0EC0061BBF4 /* BasicCell.swift */; };
 		65227A2E1E66C18F0061BBF4 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65227A2D1E66C18F0061BBF4 /* ChannelVC.swift */; };
+		65227A331E66C97D0061BBF4 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65227A321E66C97D0061BBF4 /* BaseModel.swift */; };
+		65227A381E66ED2F0061BBF4 /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65227A371E66ED2F0061BBF4 /* NetworkTool.swift */; };
 		653080061E66B8B600A0602D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653080051E66B8B600A0602D /* UIColor+Extension.swift */; };
 		93E44C51EBAF6D4EAFD56360 /* Pods_SingleDogDailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */; };
 		A99F02F5F41976AC303E2254 /* Pods_SingleDogDailyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */; };
@@ -65,6 +67,9 @@
 		65227A1F1E66C0EC0061BBF4 /* DailyThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyThemeModel.swift; sourceTree = "<group>"; };
 		65227A211E66C0EC0061BBF4 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		65227A2D1E66C18F0061BBF4 /* ChannelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		65227A321E66C97D0061BBF4 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		65227A361E66CCE50061BBF4 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		65227A371E66ED2F0061BBF4 /* NetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
 		653080051E66B8B600A0602D /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 				6500F17F1DC6ED770054A4AC /* Assets.xcassets */,
 				6500F1841DC6ED770054A4AC /* Info.plist */,
 				6500F17C1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld */,
+				65227A361E66CCE50061BBF4 /* Header.h */,
 			);
 			path = SingleDogDaily;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				6500F1AD1DC712430054A4AC /* NetworkManager.swift */,
+				65227A371E66ED2F0061BBF4 /* NetworkTool.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 		65227A181E66C0EC0061BBF4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				65227A2F1E66C9680061BBF4 /* Base */,
 				65227A191E66C0EC0061BBF4 /* Channel */,
 				65227A1A1E66C0EC0061BBF4 /* Home */,
 				65227A221E66C0EC0061BBF4 /* Setting */,
@@ -294,6 +302,30 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		65227A2F1E66C9680061BBF4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65227A301E66C9680061BBF4 /* BaseController */,
+				65227A311E66C9680061BBF4 /* BaseModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65227A301E66C9680061BBF4 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		65227A311E66C9680061BBF4 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				65227A321E66C97D0061BBF4 /* BaseModel.swift */,
+			);
+			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		653080041E66B8B600A0602D /* Category */ = {
@@ -598,10 +630,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65227A381E66ED2F0061BBF4 /* NetworkTool.swift in Sources */,
 				6500F1AE1DC712430054A4AC /* NetworkManager.swift in Sources */,
 				65227A2E1E66C18F0061BBF4 /* ChannelVC.swift in Sources */,
 				65227A261E66C0EC0061BBF4 /* HomeVC.swift in Sources */,
 				6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */,
+				65227A331E66C97D0061BBF4 /* BaseModel.swift in Sources */,
 				65227A271E66C0EC0061BBF4 /* DailyThemeListModel.swift in Sources */,
 				65227A291E66C0EC0061BBF4 /* BasicCell.swift in Sources */,
 				65227A281E66C0EC0061BBF4 /* DailyThemeModel.swift in Sources */,
@@ -745,6 +779,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SingleDogDaily/Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -761,6 +796,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tommy.demo.singledogdaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SingleDogDaily/Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

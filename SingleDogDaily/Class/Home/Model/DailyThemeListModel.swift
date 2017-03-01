@@ -9,17 +9,18 @@
 import UIKit
 import ObjectMapper
 
-class DailyThemeListModel: NSObject, Mappable {
+class DailyThemeListModel: BaseModel {
     var limit: Int?
     var subscribed: String?
     var others: [DailyThemeModel]?
     
     required init?(map: Map) {
-        
+        super.init(map: map)
     }
     
     // Mappable
-    func mapping(map: Map) {
+    override func mapping(map: Map) {
+        super.mapping(map: map)
         limit       <- map["limit"]
         subscribed  <- map["subscribed"]
         others      <- map["others"]

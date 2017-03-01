@@ -9,38 +9,56 @@
 import UIKit
 import Alamofire
 
-typealias SuccessBlock = (_ model:AnyObject?)->Void
+/// model解析成功后的回调
+typealias SuccessBlock = (_ model:BaseModel?)->Void
+/// 请求成功后的回调
+typealias ResponseBlock = (_ responseText:String?)->Void
+/// 请求失败后的回调
+typealias FailedBlock = (_ message:String?, _ code:Int?)->Void
+/// 必然会执行的回调，用于清理数据，相当于Java的finally语句
+typealias FinallyBlock = ()->Void
 
 /// This is HttpManager of this project.
 /// ```swift
 /// hello, this is a piece of sample code
 class NetworkManager: NSObject {
     
-    // theme list method.
-    static func login(userName:String, password:String, callback:@escaping SuccessBlock) {
-        let url = "https://news-at.zhihu.com/api/4/themes"
-        NetworkManager.GET(url: url, params: [:], callback: callback)
-    }
-    
-    //普通get网络请求
-    class private func GET(url:String!, params:Parameters, callback:@escaping SuccessBlock) {
-        Alamofire.request(url, method:.get, parameters:params).responseJSON { response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            print("Error: \(response.result.error)")
-            
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                let jsonModel : DailyThemeListModel? = DailyThemeListModel(JSONString:utf8Text)
-                callback(jsonModel)
-            }
+    /// 普通GET网络请求
+    class public func GET(url:String!,
+                          params:Parameters,
+                          responseCallback:@escaping ResponseBlock,
+                          failedCallback:@escaping FailedBlock,
+                          finallyCallback:@escaping FinallyBlock
+        ) {
+        Alamofire.request(url, method:.get, parameters:params).responseJSON { (response) in
+            preHandle(response:response, responseCallback:responseCallback, failedCallback:failedCallback, finallyCallback:finallyCallback)
         }
     }
     
-    //MARK: - Data Request
-    func request(url:String!, params:Any!) -> Void {
-        // 主题日报列表查看
-        
+    /// 普通POST网络请求
+    class public func POST(url:String!,
+                           params:Parameters,
+                           responseCallback:@escaping ResponseBlock,
+                           failedCallback:@escaping FailedBlock,
+                           finallyCallback:@escaping FinallyBlock
+        ) {
+        Alamofire.request(url, method: .post, parameters: params).responseJSON { (response) in
+            preHandle(response:response, responseCallback:responseCallback, failedCallback:failedCallback, finallyCallback:finallyCallback)
+        }
     }
+    
+    /// Response拦截
+    class private func preHandle(response:DataResponse<Any>,
+                                 responseCallback:@escaping ResponseBlock,
+                                 failedCallback:@escaping FailedBlock,
+                                 finallyCallback:@escaping FinallyBlock
+        ) {
+        if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+            responseCallback(utf8Text)
+        } else {
+            failedCallback(nil, 500)
+        }
+        finallyCallback()
+    }
+    
 }

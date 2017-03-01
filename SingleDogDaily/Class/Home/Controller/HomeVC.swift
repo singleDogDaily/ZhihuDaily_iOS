@@ -1,3 +1,4 @@
+
 //
 //  HomeVC.swift
 //  SingleDogDaily
@@ -14,7 +15,6 @@ import MJRefresh
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-//    lazy var tableView = UITableView()
     /// tableView
     lazy var tableView: UITableView = { [unowned self] in
         let tab = UITableView()
@@ -57,20 +57,19 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Request List Data
     func requestThemeList() -> Void {
-        NetworkManager.login(userName:"username", password:"password", callback:{ response in
-            self.tableView.mj_header.endRefreshing();
-            if response != nil {
-                let model:DailyThemeListModel = response as! DailyThemeListModel
-                if let data = model.others {
-                    self.list.removeAllObjects();
-                    self.list.addObjects(from: data)
-                    self.tableView.reloadData()
-                } else {
-                    print("返回列表数据为空")
-                }
+        NetworkTool.themelist(successCallback: { (model) in
+            let model:DailyThemeListModel = model as! DailyThemeListModel
+            if let data = model.others {
+                self.list.removeAllObjects();
+                self.list.addObjects(from: data)
+                self.tableView.reloadData()
             } else {
-                print("请求失败")
+                print("数据为空")
             }
+        }, failedCallback: { (message, code) in
+            print("请求错误")
+        }, finallyCallback: {
+            self.tableView.mj_header.endRefreshing();
         })
     }
 
