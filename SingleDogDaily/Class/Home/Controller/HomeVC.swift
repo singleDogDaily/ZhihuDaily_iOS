@@ -14,28 +14,40 @@ import MJRefresh
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    lazy var tableView = UITableView()
+//    lazy var tableView = UITableView()
+    /// tableView
+    lazy var tableView: UITableView = { [unowned self] in
+        let tab = UITableView()
+        // 注册cellID
+        tab.separatorStyle = UITableViewCellSeparatorStyle.none
+        tab.register(BasicCell.classForCoder(), forCellReuseIdentifier: "basic_cell")
+        tab.mj_header = MJRefreshNormalHeader.init( refreshingBlock: {
+            self.requestThemeList();
+        })
+        return tab
+        }()
+    
     var list:NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "Theme List"
-        self.automaticallyAdjustsScrollViewInsets = false
-        self.buildUI()
-        self.requestThemeList()
+        title = "Theme List"
+        automaticallyAdjustsScrollViewInsets = false
+        buildUI()
+        tableView.mj_header.beginRefreshing();
     }
     
     func buildUI() {
         print(#function + "--- start build home ui.")
         
-        self.view .addSubview(tableView)
+        view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(64)
-            make.left.equalTo(self.view)
-            make.bottom.equalTo(self.view)
-            make.right.equalTo(self.view)
+            make.left.equalTo(view)
+            make.bottom.equalTo(view)
+            make.right.equalTo(view)
         }
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,12 +58,18 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: - Request List Data
     func requestThemeList() -> Void {
         NetworkManager.login(userName:"username", password:"password", callback:{ response in
-            let model:DailyThemeListModel = response as! DailyThemeListModel
-            if let data = model.others {
-                self.list.addObjects(from: data)
-                self.tableView .reloadData()
+            self.tableView.mj_header.endRefreshing();
+            if response != nil {
+                let model:DailyThemeListModel = response as! DailyThemeListModel
+                if let data = model.others {
+                    self.list.removeAllObjects();
+                    self.list.addObjects(from: data)
+                    self.tableView.reloadData()
+                } else {
+                    print("返回列表数据为空")
+                }
             } else {
-                print("返回列表数据为空")
+                print("请求失败")
             }
         })
     }
@@ -64,10 +82,11 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        static let reuseIdentifier = "default_cell"
-        let model:DailyThemeModel = self.list[indexPath.row] as! DailyThemeModel
-        let cell = BasicCell(style: UITableViewCellStyle.value1, reuseIdentifier: "basic_cell")
+        let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
+        
+        let cell:BasicCell = (tableView.dequeueReusableCell(withIdentifier: "basic_cell") as? BasicCell)!
         cell.setModel(model: model)
+        
         return cell
     }
     
@@ -78,7 +97,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //
-        return self.list.count
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

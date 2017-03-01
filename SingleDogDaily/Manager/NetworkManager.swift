@@ -13,10 +13,10 @@ typealias SuccessBlock = (_ model:AnyObject?)->Void
 
 /// This is HttpManager of this project.
 /// ```swift
-/// hello
+/// hello, this is a piece of sample code
 class NetworkManager: NSObject {
     
-    // login method.
+    // theme list method.
     static func login(userName:String, password:String, callback:@escaping SuccessBlock) {
         let url = "https://news-at.zhihu.com/api/4/themes"
         NetworkManager.GET(url: url, params: [:], callback: callback)
