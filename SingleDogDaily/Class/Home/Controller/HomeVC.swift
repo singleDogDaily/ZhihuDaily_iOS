@@ -27,6 +27,11 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return tab
     }()
     
+    lazy var blackView: UIView = { [unowned self] in
+        let view = UIView()
+        return view
+    }()
+    
     var list:NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
@@ -51,6 +56,15 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         tableView.delegate = self
         tableView.dataSource = self
+        
+        view.addSubview(blackView)
+        blackView.backgroundColor = UIColor.black
+        blackView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(view)
+            make.left.equalTo(view)
+            make.right.equalTo(view)
+            make.height.equalTo(100.0)
+        }
         
         print(#function + "--- ui build completed.")
     }
