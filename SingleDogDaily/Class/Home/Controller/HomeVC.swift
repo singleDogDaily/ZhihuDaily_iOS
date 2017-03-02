@@ -25,7 +25,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.requestThemeList();
         })
         return tab
-        }()
+    }()
     
     var list:NSMutableArray = NSMutableArray()
     
@@ -67,7 +67,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 print("数据为空")
             }
         }, failedCallback: { (message, code) in
-            print("请求错误")
+            print("请求错误:\(code)")
         }, finallyCallback: {
             self.tableView.mj_header.endRefreshing();
         })
@@ -84,7 +84,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
         
         let cell:BasicCell = (tableView.dequeueReusableCell(withIdentifier: "basic_cell") as? BasicCell)!
-        cell.setModel(model: model)
+        cell.setThemeModel(model: model)
         
         return cell
     }
@@ -92,6 +92,10 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
         print("\(indexPath.row) is selected.")
+        let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
+        let storyVC: StoryVC = StoryVC()
+        storyVC.themeModel = model
+        self.navigationController?.pushViewController(storyVC, animated: true);
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

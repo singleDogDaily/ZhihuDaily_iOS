@@ -10,5 +10,6 @@
 #define Header_h
 
 @import ObjectMapper;
+@import SnapKit;
 
 #endif /* Header_h */

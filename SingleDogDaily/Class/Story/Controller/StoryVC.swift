@@ -1,5 +1,5 @@
 //
-//  ChannelVC.swift
+//  StoryVC.swift
 //  SingleDogDaily
 //
 //  Created by Tommy on 2017/3/1.
@@ -10,9 +10,9 @@ import UIKit
 import MJRefresh
 import SnapKit
 
-class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class StoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    public var theme:String = ""
+    public var themeModel:DailyThemeModel?
 
     /// tableView
     lazy var tableView: UITableView = { [unowned self] in
@@ -21,7 +21,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tab.separatorStyle = UITableViewCellSeparatorStyle.none
         tab.register(BasicCell.classForCoder(), forCellReuseIdentifier: "basic_cell")
         tab.mj_header = MJRefreshNormalHeader.init( refreshingBlock: {
-            self.requestThemeList();
+            self.requestStoryList();
         })
         return tab
         }()
@@ -32,7 +32,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        title = theme
+        title = themeModel!.name
         automaticallyAdjustsScrollViewInsets = false
         buildUI()
         tableView.mj_header.beginRefreshing();
@@ -54,12 +54,22 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print(#function + "--- ui build completed.")
     }
     
-    //MARK: - Request List Data
-    func requestThemeList() -> Void {
-//        NetworkTool.login(userName:"username", password:"password", callback:{ response in
-//            self.tableView.mj_header.endRefreshing();
-//            
-//        })
+    //MARK: - Request Story List Data
+    func requestStoryList() -> Void {
+        NetworkTool.themeStoryList(themeId: themeModel!.id!, successCallback: { (model) in
+            let model:StoryListModel = model as! StoryListModel
+            if let data = model.stories {
+                self.list.removeAllObjects();
+                self.list.addObjects(from: data)
+                self.tableView.reloadData()
+            } else {
+                print("数据为空")
+            }
+        }, failedCallback: { (message, code) in
+            print("请求错误:\(code)")
+        }) {
+            self.tableView.mj_header.endRefreshing();
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,10 +80,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
+        let model:StoryModel = list[indexPath.row] as! StoryModel
         
         let cell:BasicCell = (tableView.dequeueReusableCell(withIdentifier: "basic_cell") as? BasicCell)!
-        cell.setModel(model: model)
+        cell.setStoryModel(model: model)
         
         return cell
     }
@@ -81,6 +91,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
         print("\(indexPath.row) is selected.")
+        let model:StoryModel = list[indexPath.row] as! StoryModel
+        let articleVC:ArticleVC = ArticleVC()
+        articleVC.storyModel = model
+        self.navigationController?.pushViewController(articleVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

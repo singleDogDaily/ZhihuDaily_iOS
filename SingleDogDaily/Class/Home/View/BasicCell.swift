@@ -40,8 +40,8 @@ class BasicCell: UITableViewCell {
         titleLabel?.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(10.0)
             make.leading.equalToSuperview().offset(20.0)
-            make.trailing.equalTo(mainImageView!.snp.leading).offset(10.0)
-            make.height.equalTo(20.0)
+            make.trailing.equalTo(mainImageView!.snp.leading).offset(-10.0)
+            make.bottom.equalToSuperview().offset(-10.0)
         }
         
         contentView.addSubview(lineLabel!);
@@ -54,7 +54,7 @@ class BasicCell: UITableViewCell {
             make.trailing.equalToSuperview();
         })
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -65,9 +65,16 @@ class BasicCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setModel(model:DailyThemeModel) -> Void {
+    func setThemeModel(model:DailyThemeModel) -> Void {
         titleLabel?.text = model.name
         mainImageView?.kf.setImage(with: URL(string: model.thumbnail!))
     }
-
+    
+    func setStoryModel(model:StoryModel) -> Void {
+        titleLabel?.text = model.title
+        if let images = model.images,
+            let url = images.first {
+            mainImageView?.kf.setImage(with: URL(string: url))
+        }
+    }
 }
