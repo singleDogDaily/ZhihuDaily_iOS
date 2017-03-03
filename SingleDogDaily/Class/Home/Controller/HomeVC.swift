@@ -27,8 +27,13 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return tab
     }()
     
-    lazy var blackView: UIView = { [unowned self] in
+    lazy var blackView: UIView = {
         let view = UIView()
+        return view
+    }()
+    
+    lazy var cycleView:AnimatedCycleView = {
+        let view = AnimatedCycleView()
         return view
     }()
     
@@ -63,8 +68,18 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             make.bottom.equalTo(view)
             make.left.equalTo(view)
             make.right.equalTo(view)
+            make.centerX.equalTo(view)
             make.height.equalTo(100.0)
         }
+        
+        blackView.addSubview(cycleView)
+        cycleView.backgroundColor = UIColor.clear
+        cycleView.snp.makeConstraints { (make) in
+            make.top.equalTo(20)
+            make.left.equalTo(20)
+            make.height.width.equalTo(50)
+        }
+        cycleView.timer.fire()
         
         print(#function + "--- ui build completed.")
     }
