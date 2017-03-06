@@ -27,16 +27,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return tab
     }()
     
-    lazy var blackView: UIView = {
-        let view = UIView()
-        return view
-    }()
-    
-    lazy var cycleView:AnimatedCycleView = {
-        let view = AnimatedCycleView()
-        return view
-    }()
-    
     var list:NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
@@ -61,49 +51,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         tableView.delegate = self
         tableView.dataSource = self
-        
-        view.addSubview(blackView)
-        blackView.backgroundColor = UIColor.black
-        blackView.snp.makeConstraints { (make) in
-            make.bottom.equalTo(view)
-            make.left.equalTo(view)
-            make.right.equalTo(view)
-            make.centerX.equalTo(view)
-            make.height.equalTo(80)
-        }
-        
-        blackView.addSubview(cycleView)
-        cycleView.backgroundColor = UIColor.clear
-        cycleView.snp.makeConstraints { (make) in
-            make.centerY.equalTo(blackView)
-            make.left.equalTo(20)
-            make.height.width.equalTo(40)
-        }
-        cycleView.timer.fire()
-        
-        let titleLabel:UILabel = UILabel()
-        blackView.addSubview(titleLabel)
-        titleLabel.font = UIFont.systemFont(ofSize: 18)
-        titleLabel.textColor = UIColor.white
-        titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(cycleView)
-            make.leading.equalTo(cycleView.snp.trailing).offset(10)
-            make.height.equalTo(18)
-            make.width.greaterThanOrEqualTo(40)
-        }
-        titleLabel.text = "单身狗日报"
-        
-        let descLabel:UILabel = UILabel()
-        blackView.addSubview(descLabel)
-        descLabel.font = UIFont.systemFont(ofSize: 14)
-        descLabel.textColor = UIColor.lightText
-        descLabel.snp.makeConstraints { (make) in
-            make.bottom.equalTo(cycleView)
-            make.leading.equalTo(cycleView.snp.trailing).offset(10)
-            make.height.equalTo(14)
-            make.width.greaterThanOrEqualTo(40)
-        }
-        descLabel.text = "每天几次都随你"
         
         print(#function + "--- ui build completed.")
     }

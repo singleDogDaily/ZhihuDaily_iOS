@@ -38,6 +38,7 @@ class AnimatedCycleView: UIView {
         if count == maxCount {
             timer.invalidate()
             print("计时结束")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "adview.finish"), object: nil)
             return
         } else {
             count += 1;
