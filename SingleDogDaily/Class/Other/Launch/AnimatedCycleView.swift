@@ -52,12 +52,10 @@ class AnimatedCycleView: UIView {
         
         //context就相当于是画布
         let context:CGContext = UIGraphicsGetCurrentContext()!
-        //画笔线的颜色
-//        context.setStrokeColor(red: 1, green: 1, blue: 1, alpha: 1.0)
-        //设置填充颜色 (这里没什么用)
-        context.setFillColor(red: 1, green: 0, blue: 0, alpha: 1.0)
         //线的宽度
-        context.setLineWidth(5.0)
+        context.setLineWidth(4.0)
+        //线条圆角
+        context.setLineCap(.round)
         //线的颜色
         UIColor.lightGray.set()
         //参数分别为：哪个画布，圆点坐标x，圆点坐标y，半径，开始的弧度，结束的弧度，clockwise 0为顺时针，1为逆时针。
@@ -65,7 +63,7 @@ class AnimatedCycleView: UIView {
         let endAngle = CGFloat(M_PI/2)
         let startAngle:CGFloat = endAngle + CGFloat(2*M_PI * 0.75 * Double(count)/Double(maxCount))
         
-        context.addArc(center: CGPoint(x:self.bounds.size.width * 0.5, y:self.bounds.size.width * 0.5), radius: self.bounds.size.width * 0.5 - 6, startAngle: startAngle, endAngle: endAngle, clockwise: true)
+        context.addArc(center: CGPoint(x:self.bounds.size.width * 0.5, y:self.bounds.size.width * 0.5), radius: self.bounds.size.width * 0.5 - 9, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
         //绘制路径
         context.drawPath(using: CGPathDrawingMode.stroke)
