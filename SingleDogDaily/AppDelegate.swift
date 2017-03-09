@@ -26,8 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigator.setNavigationBarHidden(false, animated: false)
         self.window!.rootViewController = navigator
         // 添加广告页
-        let adView:AdView = AdView.init(bounds: (UIApplication.shared.keyWindow)!.bounds)
+        let adView:AdView = AdView()
+        adView.frame = (UIApplication.shared.keyWindow)!.bounds
         adView.build()
+        adView.launchFinishedCallback = {
+            print("广告页播放完毕")
+        }
         self.window!.addSubview(adView)
         return true
     }

@@ -8,7 +8,11 @@
 
 import UIKit
 
+typealias generalCallback = ()->Void
+
 class AdView: UIView {
+    
+    var launchFinishedCallback:generalCallback?
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -17,44 +21,42 @@ class AdView: UIView {
         // Drawing code
     }
     */
-    public init(bounds: CGRect) {
-        super.init(frame: bounds)
-        NotificationCenter.default.addObserver(self, selector: #selector(AdView.launchFinished), name: NSNotification.Name(rawValue: "adview.finish"), object: nil)
-    }
-    
-    @objc private func launchFinished() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "adview.finish"), object: nil)
-        UIView.animate(withDuration: 1.5, animations: {
-            self.alpha = 0;
-        }) { (finished) in
-            self.removeFromSuperview()
-        }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     lazy var bottomView: AdBottomView = {
         let view = AdBottomView()
         view.backgroundColor = UIColor.black
         view.buildUI()
+        view.playOverCallback = { [unowned self] in
+            if let callback = self.launchFinishedCallback {
+                callback()
+            }
+            
+            UIView.animate(withDuration: 1.5, animations: {
+                self.alpha = 0;
+            }) { (finished) in
+                self.removeFromSuperview()
+            }
+        }
         return view
     }()
     
     lazy var imageView:UIImageView = {
         let imgView = UIImageView()
-        imgView.image = UIImage.init(named: "adimage")
+        imgView.backgroundColor = UIColor.black
         return imgView
     }()
     
-//    var prefersStatusBarHidden: Bool {
-//        return true
-//    }
+    lazy var authorLabel:UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.white
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
     
     public func build() {
         self.addSubview(self.bottomView)
         self.addSubview(self.imageView)
+        self.addSubview(self.authorLabel)
         
         self.bottomView.snp.makeConstraints { (make) in
             make.bottom.equalTo(self)
@@ -69,6 +71,32 @@ class AdView: UIView {
             make.leading.trailing.equalTo(self)
             make.bottom.equalTo(self.bottomView.snp.top)
         }
+        
+        self.authorLabel.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.imageView.snp.bottom).offset(-16)
+            make.centerX.equalTo(self.bottomView)
+            make.height.greaterThanOrEqualTo(14)
+            make.width.greaterThanOrEqualTo(40)
+        }
+        
+        NetworkTool.launchAdvertData(successCallback: { (model) in
+            let model:AdLaunchModelList = model as! AdLaunchModelList
+            if let data = model.creatives {
+                if data.count > 0 {
+                    let adModel:AdLaunchModel = data[0]
+                    if let url = adModel.url, let text = adModel.text {
+                        self.authorLabel.text = text
+                        self.imageView.kf.setImage(with: URL(string: url))
+                    }
+                }
+            } else {
+                print("数据异常")
+            }
+        }, failedCallback: { (message, code) in
+            print("请求错误:\(code),message:\(message)")
+        }, finallyCallback: {
+            
+        })
     }
 
 }

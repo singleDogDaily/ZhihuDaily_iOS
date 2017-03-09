@@ -10,6 +10,7 @@ import UIKit
 
 class AnimatedCycleView: UIView {
     
+    var playOverCallback:generalCallback?
     let maxCount = 100
     private var count:Int = 0
     
@@ -37,8 +38,9 @@ class AnimatedCycleView: UIView {
     @objc private func timerAction() {
         if count == maxCount {
             timer.invalidate()
-            print("计时结束")
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "adview.finish"), object: nil)
+            if let playOver = playOverCallback {
+                playOver()
+            }
             return
         } else {
             count += 1;

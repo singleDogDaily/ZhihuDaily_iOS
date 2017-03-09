@@ -10,6 +10,8 @@ import UIKit
 
 class AdBottomView: UIView {
 
+    var playOverCallback:generalCallback?
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -18,8 +20,13 @@ class AdBottomView: UIView {
     }
     */
     
-    lazy var cycleView:AnimatedCycleView = {
+    lazy var cycleView:AnimatedCycleView = { [unowned self] in
         let view = AnimatedCycleView()
+        view.playOverCallback = {
+            if let callback = self.playOverCallback {
+                callback()
+            }
+        }
         return view
     }()
     

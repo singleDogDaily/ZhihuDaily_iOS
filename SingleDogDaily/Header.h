@@ -11,5 +11,6 @@
 
 @import ObjectMapper;
 @import SnapKit;
+@import Kingfisher;
 
 #endif /* Header_h */
