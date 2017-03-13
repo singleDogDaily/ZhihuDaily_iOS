@@ -18,6 +18,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     /// tableView
     lazy var tableView: UITableView = { [unowned self] in
         let tab = UITableView()
+        tab.delegate = self
+        tab.dataSource = self
         // 注册cellID
         tab.separatorStyle = UITableViewCellSeparatorStyle.none
         tab.register(BasicCell.classForCoder(), forCellReuseIdentifier: "basic_cell")
@@ -50,8 +52,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             make.bottom.equalTo(view)
             make.right.equalTo(view)
         }
-        tableView.delegate = self
-        tableView.dataSource = self
         
         print(#function + "--- ui build completed.")
     }
