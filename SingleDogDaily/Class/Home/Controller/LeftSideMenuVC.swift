@@ -24,16 +24,17 @@ class LeftSideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let tab = UITableView()
         tab.delegate = self
         tab.dataSource = self
+        tab.bounces = false
         // 注册cellID
         tab.separatorStyle = UITableViewCellSeparatorStyle.none
-        tab.register(BasicCell.classForCoder(), forCellReuseIdentifier: "basic_cell")
+        tab.register(LeftMenuCell.classForCoder(), forCellReuseIdentifier: "left_menu_cell")
         return tab
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.init(colorLiteralRed: 35.0/255.0, green: 42.0/255.0, blue: 48.0/255.0, alpha: 1.0)
+        view.backgroundColor = UIColor.leftMenuBgColor()
         // Do any additional setup after loading the view.
         buildUI()
         self.requestThemeList()
@@ -83,19 +84,20 @@ class LeftSideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
         
-        let cell:BasicCell = (tableView.dequeueReusableCell(withIdentifier: "basic_cell") as? BasicCell)!
-        cell.setThemeModel(model: model)
+        let cell:LeftMenuCell = (tableView.dequeueReusableCell(withIdentifier: "left_menu_cell") as? LeftMenuCell)!
+//        cell.setThemeModel(model: model)
+        cell .setTitleText(text: model.name)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
-        print("\(indexPath.row) is selected.")
-        let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
-        let storyVC: StoryVC = StoryVC()
-        storyVC.themeModel = model
-        self.navigationController?.pushViewController(storyVC, animated: true)
+//        //
+//        print("\(indexPath.row) is selected.")
+//        let model:DailyThemeModel = list[indexPath.row] as! DailyThemeModel
+//        let storyVC: StoryVC = StoryVC()
+//        storyVC.themeModel = model
+//        self.navigationController?.pushViewController(storyVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

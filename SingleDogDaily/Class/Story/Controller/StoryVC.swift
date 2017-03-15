@@ -24,7 +24,7 @@ class StoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.requestStoryList();
         })
         return tab
-        }()
+    }()
     
     var list:NSMutableArray = NSMutableArray()
     

@@ -111,7 +111,7 @@ class HomeSideMenuTopView: UIView {
         }
         
         let storeImageView = UIImageView()
-        storeImageView.image = UIImage.init(named: "photo")
+        storeImageView.image = UIImage.init(named: "message_white")
         storeView.addSubview(storeImageView)
         storeImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(storeView)
@@ -136,7 +136,7 @@ class HomeSideMenuTopView: UIView {
         }
         
         let messageImageView = UIImageView()
-        messageImageView.image = UIImage.init(named: "photo")
+        messageImageView.image = UIImage.init(named: "message_white")
         messageView.addSubview(messageImageView)
         messageImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(messageView)
@@ -161,7 +161,7 @@ class HomeSideMenuTopView: UIView {
         }
         
         let settingImageView = UIImageView()
-        settingImageView.image = UIImage.init(named: "photo")
+        settingImageView.image = UIImage.init(named: "message_white")
         messageView.addSubview(settingImageView)
         settingImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(settingView)
@@ -174,6 +174,16 @@ class HomeSideMenuTopView: UIView {
             make.top.equalTo(settingImageView.snp.bottom)
             make.leading.trailing.equalTo(settingView)
             make.bottom.equalTo(settingView)
+        }
+        
+        // 分割线
+        let lineLabel:UILabel = UILabel()
+        self.addSubview(lineLabel)
+        lineLabel.backgroundColor = UIColor.black
+        lineLabel.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self)
+            make.leading.trailing.equalTo(self)
+            make.height.equalTo(0.5)
         }
     }
 

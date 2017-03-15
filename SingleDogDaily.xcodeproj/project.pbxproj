@@ -30,13 +30,15 @@
 		6525B10B1E6D51B200E3CF1B /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525B10A1E6D51B200E3CF1B /* AdView.swift */; };
 		6525B10D1E6D5BE300E3CF1B /* AdBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525B10C1E6D5BE300E3CF1B /* AdBottomView.swift */; };
 		6525B1101E70057D00E3CF1B /* AdLaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525B10F1E70057D00E3CF1B /* AdLaunchModel.swift */; };
-		652B7D4D1E717E15000B1F46 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B7D491E717E15000B1F46 /* SideMenuManager.swift */; };
-		652B7D4E1E717E15000B1F46 /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B7D4A1E717E15000B1F46 /* SideMenuTransition.swift */; };
-		652B7D4F1E717E15000B1F46 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B7D4B1E717E15000B1F46 /* UISideMenuNavigationController.swift */; };
-		652B7D501E717E15000B1F46 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B7D4C1E717E15000B1F46 /* UITableViewVibrantCell.swift */; };
 		652B7D521E717F84000B1F46 /* LeftSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B7D511E717F84000B1F46 /* LeftSideMenuVC.swift */; };
 		652B7D541E7183D6000B1F46 /* HomeSideMenuTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B7D531E7183D6000B1F46 /* HomeSideMenuTopView.swift */; };
 		653080061E66B8B600A0602D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653080051E66B8B600A0602D /* UIColor+Extension.swift */; };
+		65B921A81E79592700576FDD /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B921A41E79592700576FDD /* SideMenuManager.swift */; };
+		65B921A91E79592700576FDD /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B921A51E79592700576FDD /* SideMenuTransition.swift */; };
+		65B921AA1E79592700576FDD /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B921A61E79592700576FDD /* UISideMenuNavigationController.swift */; };
+		65B921AB1E79592700576FDD /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B921A71E79592700576FDD /* UITableViewVibrantCell.swift */; };
+		65B921B01E79597400576FDD /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B921AF1E79597400576FDD /* LeftMenuCell.swift */; };
+		65B921B21E7962E800576FDD /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B921B11E7962E800576FDD /* UIColor+Theme.swift */; };
 		93E44C51EBAF6D4EAFD56360 /* Pods_SingleDogDailyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A96344982F60C136F6ECBA /* Pods_SingleDogDailyUITests.framework */; };
 		A99F02F5F41976AC303E2254 /* Pods_SingleDogDailyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D222F72F4EE90B2166C9F2BC /* Pods_SingleDogDailyTests.framework */; };
 /* End PBXBuildFile section */
@@ -90,13 +92,15 @@
 		6525B10A1E6D51B200E3CF1B /* AdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
 		6525B10C1E6D5BE300E3CF1B /* AdBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdBottomView.swift; sourceTree = "<group>"; };
 		6525B10F1E70057D00E3CF1B /* AdLaunchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdLaunchModel.swift; sourceTree = "<group>"; };
-		652B7D491E717E15000B1F46 /* SideMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
-		652B7D4A1E717E15000B1F46 /* SideMenuTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTransition.swift; sourceTree = "<group>"; };
-		652B7D4B1E717E15000B1F46 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISideMenuNavigationController.swift; sourceTree = "<group>"; };
-		652B7D4C1E717E15000B1F46 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewVibrantCell.swift; sourceTree = "<group>"; };
 		652B7D511E717F84000B1F46 /* LeftSideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideMenuVC.swift; sourceTree = "<group>"; };
 		652B7D531E7183D6000B1F46 /* HomeSideMenuTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSideMenuTopView.swift; sourceTree = "<group>"; };
 		653080051E66B8B600A0602D /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		65B921A41E79592700576FDD /* SideMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
+		65B921A51E79592700576FDD /* SideMenuTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTransition.swift; sourceTree = "<group>"; };
+		65B921A61E79592700576FDD /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISideMenuNavigationController.swift; sourceTree = "<group>"; };
+		65B921A71E79592700576FDD /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewVibrantCell.swift; sourceTree = "<group>"; };
+		65B921AF1E79597400576FDD /* LeftMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
+		65B921B11E7962E800576FDD /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		7E383E69455363E064276F7A /* Pods-SingleDogDailyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDailyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDailyTests/Pods-SingleDogDailyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80FAE9DED6F82557F9AC8577 /* Pods-SingleDogDaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleDogDaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleDogDaily/Pods-SingleDogDaily.debug.xcconfig"; sourceTree = "<group>"; };
 		AE418D5CD88D3E192545D259 /* Pods_SingleDogDaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleDogDaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,7 +294,8 @@
 		650D30221E683CA40016C2DF /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				652B7D481E717E15000B1F46 /* SideMenu */,
+				65B921AC1E79594F00576FDD /* SideMenuView */,
+				65B921A31E79592700576FDD /* SideMenuKit */,
 				6525B10E1E70055C00E3CF1B /* Model */,
 				650D30231E683CA40016C2DF /* Launch */,
 			);
@@ -420,23 +425,48 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		652B7D481E717E15000B1F46 /* SideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				652B7D491E717E15000B1F46 /* SideMenuManager.swift */,
-				652B7D4A1E717E15000B1F46 /* SideMenuTransition.swift */,
-				652B7D4B1E717E15000B1F46 /* UISideMenuNavigationController.swift */,
-				652B7D4C1E717E15000B1F46 /* UITableViewVibrantCell.swift */,
-			);
-			path = SideMenu;
-			sourceTree = "<group>";
-		};
 		653080041E66B8B600A0602D /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				653080051E66B8B600A0602D /* UIColor+Extension.swift */,
+				65B921B11E7962E800576FDD /* UIColor+Theme.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		65B921A31E79592700576FDD /* SideMenuKit */ = {
+			isa = PBXGroup;
+			children = (
+				65B921A41E79592700576FDD /* SideMenuManager.swift */,
+				65B921A51E79592700576FDD /* SideMenuTransition.swift */,
+				65B921A61E79592700576FDD /* UISideMenuNavigationController.swift */,
+				65B921A71E79592700576FDD /* UITableViewVibrantCell.swift */,
+			);
+			path = SideMenuKit;
+			sourceTree = "<group>";
+		};
+		65B921AC1E79594F00576FDD /* SideMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				65B921AD1E79594F00576FDD /* Model */,
+				65B921AE1E79594F00576FDD /* View */,
+			);
+			path = SideMenuView;
+			sourceTree = "<group>";
+		};
+		65B921AD1E79594F00576FDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65B921AE1E79594F00576FDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65B921AF1E79597400576FDD /* LeftMenuCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6C2238A7BB411B6CB909CE1B /* Frameworks */ = {
@@ -738,25 +768,27 @@
 				6500F1AE1DC712430054A4AC /* NetworkManager.swift in Sources */,
 				6525B10D1E6D5BE300E3CF1B /* AdBottomView.swift in Sources */,
 				65227A261E66C0EC0061BBF4 /* HomeVC.swift in Sources */,
-				652B7D4E1E717E15000B1F46 /* SideMenuTransition.swift in Sources */,
 				650D30151E67B95B0016C2DF /* StoryVC.swift in Sources */,
 				6500F17E1DC6ED770054A4AC /* SingleDogDaily.xcdatamodeld in Sources */,
 				650D301D1E67F9E30016C2DF /* ArticleVC.swift in Sources */,
-				652B7D501E717E15000B1F46 /* UITableViewVibrantCell.swift in Sources */,
 				650D30171E67B9950016C2DF /* StoryModel.swift in Sources */,
 				6525B10B1E6D51B200E3CF1B /* AdView.swift in Sources */,
 				65227A331E66C97D0061BBF4 /* BaseModel.swift in Sources */,
 				652B7D541E7183D6000B1F46 /* HomeSideMenuTopView.swift in Sources */,
 				65227A271E66C0EC0061BBF4 /* DailyThemeListModel.swift in Sources */,
 				65227A291E66C0EC0061BBF4 /* BasicCell.swift in Sources */,
-				652B7D4D1E717E15000B1F46 /* SideMenuManager.swift in Sources */,
+				65B921AB1E79592700576FDD /* UITableViewVibrantCell.swift in Sources */,
 				65227A281E66C0EC0061BBF4 /* DailyThemeModel.swift in Sources */,
-				652B7D4F1E717E15000B1F46 /* UISideMenuNavigationController.swift in Sources */,
 				6525B1101E70057D00E3CF1B /* AdLaunchModel.swift in Sources */,
+				65B921B01E79597400576FDD /* LeftMenuCell.swift in Sources */,
 				6500F1761DC6ED770054A4AC /* AppDelegate.swift in Sources */,
+				65B921B21E7962E800576FDD /* UIColor+Theme.swift in Sources */,
 				650D301F1E67F9F40016C2DF /* ArticleModel.swift in Sources */,
+				65B921A91E79592700576FDD /* SideMenuTransition.swift in Sources */,
 				653080061E66B8B600A0602D /* UIColor+Extension.swift in Sources */,
+				65B921A81E79592700576FDD /* SideMenuManager.swift in Sources */,
 				650D30251E683CC90016C2DF /* AnimatedCycleView.swift in Sources */,
+				65B921AA1E79592700576FDD /* UISideMenuNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
